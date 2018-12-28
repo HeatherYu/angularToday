@@ -4,12 +4,15 @@ import { SetupComponent } from './pages/setup/setup.component';
 
 
 const routes: Routes = [
+  {
+    path: 'main', loadChildren: './pages/main/main.module#MainModule'
+  },
   { path: 'setup', component: SetupComponent },
   { path: '', redirectTo: '/setup', pathMatch: 'full' }
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

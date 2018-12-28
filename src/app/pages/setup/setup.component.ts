@@ -18,10 +18,9 @@ export class SetupComponent implements OnInit {
   ngOnInit() {
   }
   completeSetup(): void {
-    console.log(this.username)
-    return
     this.store.set(INIT_FLAG, true);
     this.store.set(START_USING_DATE, getTodayTime());
     this.store.set(USERNAME, this.username);
+    console.log( this.store.get('today.userInfo.username') );
   }
 }
