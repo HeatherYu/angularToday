@@ -90,6 +90,7 @@ export class ListComponent implements OnInit, OnDestroy {
     });
   }
 
+  // 右击调出dropDown
   contextMenu($event: MouseEvent, template: TemplateRef<void>, uuid: string): void {
     this.dropdown = this.dropdownService.create($event, template);
     this.contextListUuid = uuid;
