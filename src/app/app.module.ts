@@ -15,6 +15,8 @@ registerLocaleData(zh);
 
 // services
 import { LocalStorageService } from './services/local-storage.service';
+import { ListService } from './services/list/list.service';
+import { TodoService } from './services/todo/todo.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { LocalStorageService } from './services/local-storage.service';
   ],
   providers: [
     { provide: NZ_I18N, useValue: zh_CN },
-    LocalStorageService
+    LocalStorageService,
+    ListService,
+    TodoService
   ],
   bootstrap: [AppComponent]
 })

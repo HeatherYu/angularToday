@@ -5,7 +5,7 @@ import {
   INIT_FLAG,
   START_USING_DATE
 } from '../../services/local-storage.namespace';
-import { getTodayTime } from '../../../util/time';
+import { getTodayTime } from '../../../utils/time';
 @Component({
   selector: 'app-setup',
   templateUrl: './setup.component.html',
